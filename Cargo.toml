@@ -1,0 +1,13 @@
+[package]
+name = "rust-playground"
+version = "0.1.0"
+authors = ["Markus Felten <Markus.Felten@db.com>"]
+edition = "2018"
+
+[dependencies]
+hashbrown = "0.1"
+
+[[bin]]
+name = "rust-playground"
+path = "main.rs"
+
