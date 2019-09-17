@@ -1,5 +1,5 @@
  fn main() {
-    let mut x = 5;
+    let  x = 5;
     let y = &x;
     //let z = &mut x; // This was not allowed before 1.31.0.
     let z = &x; // This was not allowed before 1.31.0.
