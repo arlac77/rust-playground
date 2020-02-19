@@ -1,9 +1,15 @@
  fn main() {
-    let  x = 5;
-    let y = &x;
-    //let z = &mut x; // This was not allowed before 1.31.0.
-    let z = &x; // This was not allowed before 1.31.0.
- 
-    println!("x={} y={} z={}", x,y, z);
+   //let guess:i128 = "42".parse().expect("Not a number!");
+     // println!("x={}", guess);
+
+   let x = parse("xxx");
+   println!("x={}", x);
  }
 
+fn parse(value : &str) -> i64 {
+
+  if value.len() == 0 {
+   return 1
+  }
+   return 0
+}
