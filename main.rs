@@ -1,13 +1,14 @@
  fn main() {
-   //let guess:i128 = "42".parse().expect("Not a number!");
-     // println!("x={}", guess);
+  let mut sequence = 0..3;
 
-   let x = parse("xxx");
-   println!("x={}", x);
+  println!("Four consecutive `next` calls on 0..3");
+  println!("> {:?}", sequence.next());
+  println!("> {:?}", sequence.next());
+  println!("> {:?}", sequence.next());
+  println!("> {:?}", sequence.next());
  }
 
 fn parse(value : &str) -> i64 {
-
   if value.len() == 0 {
    return 1
   }
