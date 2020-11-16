@@ -10,6 +10,7 @@
  }
 
 
+#[derive(PartialEq, Eq, Clone, Copy)]
 enum Mask {
   M = 0,
   I = 1,
