@@ -7,6 +7,9 @@
    else {
     println!("?");
   }
+
+  let n = Mask.from(0);
+
  }
 
 
@@ -17,6 +20,11 @@ enum Mask {
   V = 2
 }
 
+impl From<usize> for Mask {
+    fn from(value: usize) -> Self {
+        unsafe { std::mem::transmute(value as u8) }
+    }
+}
 
 
 #[allow(unused_variables)]
