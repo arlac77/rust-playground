@@ -1,15 +1,20 @@
- fn main() {
-   //let guess:i128 = "42".parse().expect("Not a number!");
-     // println!("x={}", guess);
+use std::cmp::Ordering;
 
-   let x = parse("xxx");
-   println!("x={}", x);
+
+fn compare( a: &usize,b: &usize)
+-> Ordering
+{
+    println!("compare {:?}<>{:?}",a,b);
+
+    return b.cmp(a); //Ordering::Equal;
+}
+
+
+fn main() {
+  let mut x = vec![1,2,3];
+
+  print!("{:?}",x);
+  x.sort_by(compare);
+  print!("{:?}",x);
  }
 
-fn parse(value : &str) -> i64 {
-
-  if value.len() == 0 {
-   return 1
-  }
-   return 0
-}
