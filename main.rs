@@ -1,6 +1,19 @@
 use std::cmp::Ordering;
 
 
+macro_rules! replace_expr {
+    ($_t:tt $sub:expr) => {$sub};
+}
+
+macro_rules! count_tts {
+    ($($tts:tt)*) => {0usize $(+ replace_expr!($tts 1usize))*};
+}
+
+fn main() {
+    assert_eq!(count_tts!(0 1 2), 3);
+}
+	
+
 fn compare( a: &usize,b: &usize)
 -> Ordering
 {
@@ -10,7 +23,7 @@ fn compare( a: &usize,b: &usize)
 }
 
 
-fn main() {
+fn main3() {
   let mut x = vec![1,2,3];
 
   print!("{:?}",x);
@@ -25,8 +38,6 @@ fn main() {
    else {
     println!("?");
   }
-
-  let n = Mask.from(0);
 
  }
 
